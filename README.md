@@ -24,8 +24,8 @@ This repository contains the source code files for few lab experiments completed
 
 ```
 .
-├── Lab_1/
-├── Lab_2/
+├── Lab_1 - Title/
+├── Lab 2 - Title/
 ├── ...
 ├── .gitignore
 └── README.md
