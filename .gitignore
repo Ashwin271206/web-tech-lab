@@ -1,5 +1,21 @@
+# Dependencies
 node_modules/
-dist/
-.vite/
+
+# Environment variables
 .env
-.env.example
+
+# Build output
+dist/
+build/
+out/
+
+# IDE / editor
+.vscode/*
+
+# Temporary files
+*.tmp
+*.temp
+
+# Cache
+.cache/
+.vite/
