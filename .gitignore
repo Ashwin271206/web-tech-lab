@@ -19,3 +19,6 @@ out/
 # Cache
 .cache/
 .vite/
+
+*.log
+.DS_Store

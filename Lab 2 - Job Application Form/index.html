@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Application Portal</title>
+<style>
+:root {
+  --primary: #2f6fed;
+  --primary-dark: #1f4fc4;
+  --error: #e34b4b;
+  --bg: #eef1f7;
+  --card-bg: #ffffff;
+  --text-main: #1c2130;
+  --text-muted: #6b7280;
+  --border: #dbe0ea;
+  --field-bg: #f7f8fb;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+}
+.page-wrap { width: 100%; max-width: 560px; }
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 32px;
+  box-shadow: 0 2px 10px rgba(20, 30, 60, 0.06);
+}
+.card.hidden { display: none; }
+.card-title { font-size: 20px; margin-bottom: 24px; }
+.field { margin-bottom: 18px; display: flex; flex-direction: column; }
+label { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+input, select, textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--field-bg);
+  font-size: 14px;
+  color: var(--text-main);
+  font-family: inherit;
+}
+textarea { resize: vertical; min-height: 90px; }
+input:focus, select:focus, textarea:focus { outline: none; border-color: var(--primary); background: #fff; }
+.field.error input, .field.error select, .field.error textarea { border-color: var(--error); background: #fdf1f1; }
+.error-msg { color: var(--error); font-size: 12px; margin-top: 5px; min-height: 14px; font-weight: 500; }
+.btn-primary {
+  width: 100%; padding: 13px; background: var(--primary); color: #fff; border: none;
+  border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; margin-top: 6px;
+}
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary {
+  flex: 1; padding: 13px; background: var(--field-bg); color: var(--text-main);
+  border: 1px solid var(--border); border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer;
+}
+.btn-row { display: flex; gap: 12px; margin-top: 6px; }
+.btn-row .btn-primary { margin-top: 0; flex: 1.4; }
+.input-icon-wrap { position: relative; display: flex; align-items: center; }
+.input-icon-wrap input { padding-right: 42px; }
+.toggle-eye {
+  position: absolute; right: 12px; cursor: pointer; font-size: 13px;
+  font-weight: 700; color: var(--text-muted); user-select: none;
+}
+.toggle-eye:hover { color: var(--primary); }
+.success-card { text-align: center; }
+.success-text { color: var(--text-muted); margin: 10px 0 24px; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+  <section class="card" id="step-1">
+    <h1 class="card-title" style="text-align: center;">Register to Access the Job Application Form</h1>
+    <form id="registerForm" novalidate>
+      <div class="field">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" placeholder="Enter full name">
+        <span class="error-msg" id="err-fullName"></span>
+      </div>
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="e.g. user@example.com">
+        <span class="error-msg" id="err-email"></span>
+      </div>
+      <div class="field">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="10 digit number" maxlength="10">
+        <span class="error-msg" id="err-phone"></span>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <div class="input-icon-wrap">
+          <input type="password" id="password" placeholder="At least 8 characters">
+          <span class="toggle-eye" data-target="password">SHOW</span>
+        </div>
+        <span class="error-msg" id="err-password"></span>
+      </div>
+      <div class="field">
+        <label for="confirmPassword">Confirm Password</label>
+        <div class="input-icon-wrap">
+          <input type="password" id="confirmPassword" placeholder="Re-enter password">
+          <span class="toggle-eye" data-target="confirmPassword">SHOW</span>
+        </div>
+        <span class="error-msg" id="err-confirmPassword"></span>
+      </div>
+      <button type="submit" class="btn-primary">Register</button>
+    </form>
+  </section>
+
+  <section class="card hidden" id="step-2">
+    <h1 class="card-title"style="text-align: center;">Job Application Form</h1>
+    <form id="jobForm" novalidate>
+      <div class="field">
+        <label for="position">Position</label>
+        <select id="position">
+          <option value="">Select a position</option>
+          <option>Frontend Developer</option>
+          <option>Backend Developer</option>
+          <option>Full Stack Developer</option>
+          <option>UI/UX Designer</option>
+          <option>AI Engineer</option>
+          <option>Data Analyst</option>
+        </select>
+        <span class="error-msg" id="err-position"></span>
+      </div>
+      <div class="field">
+        <label for="jobLevel">Job Level</label>
+        <select id="jobLevel">
+          <option value="">Select job level</option>
+          <option>Intern</option>
+          <option>Junior</option>
+          <option>Mid-Level</option>
+          <option>Senior</option>
+          <option>Lead</option>
+        </select>
+        <span class="error-msg" id="err-jobLevel"></span>
+      </div>
+      <div class="field">
+        <label for="experience">Experience (years)</label>
+        <input type="number" id="experience" placeholder="0 - 30" min="0" max="30">
+        <span class="error-msg" id="err-experience"></span>
+      </div>
+      <div class="field">
+        <label for="skills">Skills</label>
+        <input type="text" id="skills" placeholder="e.g. JavaScript, React, SQL">
+        <span class="error-msg" id="err-skills"></span>
+      </div>
+      <div class="field">
+        <label for="description">Describe Your Projects</label>
+        <textarea id="description" rows="4" placeholder="At least 50 characters..."></textarea>
+        <span class="error-msg" id="err-description"></span>
+      </div>
+      <div class="field">
+        <label for="resume">Resume Upload (PDF or DOCX)</label>
+        <input type="file" id="resume" accept=".pdf,.docx">
+        <span class="error-msg" id="err-resume"></span>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn-secondary" id="backBtn">Back</button>
+        <button type="submit" class="btn-primary">Submit Application</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="card hidden success-card" id="step-3">
+    <h1 class="card-title">Application Submitted Successfully!</h1>
+    <p class="success-text">Thank you for applying. We'll review your application and get back to you soon.</p>
+  </section>
+
+</div>
+
+<script>
+function showStep(n) {
+  document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+  document.getElementById(`step-${n}`).classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+function setError(id, msg) {
+  const input = document.getElementById(id);
+  const err = document.getElementById(`err-${id}`);
+  const field = input.closest('.field');
+  field.classList.toggle('error', !!msg);
+  err.textContent = msg || '';
+  return !msg;
+}
+
+document.querySelectorAll('.toggle-eye').forEach(el => {
+  el.addEventListener('click', () => {
+    const input = document.getElementById(el.dataset.target);
+    const isPwd = input.type === 'password';
+    input.type = isPwd ? 'text' : 'password';
+    el.textContent = isPwd ? 'HIDE' : 'SHOW';
+  });
+});
+
+const registerForm = document.getElementById('registerForm');
+const validateFullName = () => {
+  const v = document.getElementById('fullName').value.trim();
+  if (!v) return setError('fullName', 'Full name is required.');
+  if (!/^[A-Za-z\s]+$/.test(v)) return setError('fullName', 'Only alphabets and spaces are allowed.');
+  return setError('fullName', '');
+};
+const validateEmail = () => {
+  const v = document.getElementById('email').value.trim();
+  if (!v) return setError('email', 'Email is required.');
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return setError('email', 'Enter a valid email address.');
+  return setError('email', '');
+};
+const validatePhone = () => {
+  const v = document.getElementById('phone').value.trim();
+  if (!v) return setError('phone', 'Phone number is required.');
+  if (!/^\d{10}$/.test(v)) return setError('phone', 'Phone number must be exactly 10 digits.');
+  return setError('phone', '');
+};
+const validatePassword = () => {
+  const v = document.getElementById('password').value;
+  if (!v) return setError('password', 'Password is required.');
+  if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/.test(v))
+    return setError('password', 'Min 8 chars, with upper, lower, number & special character.');
+  return setError('password', '');
+};
+const validateConfirmPassword = () => {
+  const v = document.getElementById('confirmPassword').value;
+  if (!v) return setError('confirmPassword', 'Please confirm your password.');
+  if (v !== document.getElementById('password').value) return setError('confirmPassword', 'Passwords do not match.');
+  return setError('confirmPassword', '');
+};
+
+document.getElementById('phone').addEventListener('input', e => e.target.value = e.target.value.replace(/\D/g, '').slice(0, 10));
+['fullName','email','phone','password','confirmPassword'].forEach(id => {
+  document.getElementById(id).addEventListener('input', () => ({fullName:validateFullName, email:validateEmail, phone:validatePhone, password:validatePassword, confirmPassword:validateConfirmPassword}[id]()));
+});
+
+registerForm.addEventListener('submit', e => {
+  e.preventDefault();
+  if ([validateFullName(), validateEmail(), validatePhone(), validatePassword(), validateConfirmPassword()].every(Boolean)) showStep(2);
+});
+
+const jobForm = document.getElementById('jobForm');
+const descriptionEl = document.getElementById('description');
+
+descriptionEl.addEventListener('input', () => {
+  validateDescription();
+});
+
+const validatePosition = () => setError('position', document.getElementById('position').value ? '' : 'Please select a position.');
+const validateJobLevel = () => setError('jobLevel', document.getElementById('jobLevel').value ? '' : 'Please select a job level.');
+const validateExperience = () => {
+  const v = document.getElementById('experience').value;
+  const n = Number(v);
+  if (v === '' || isNaN(n) || n < 0 || n > 30) return setError('experience', 'Experience must be between 0 and 30 years.');
+  return setError('experience', '');
+};
+const validateSkills = () => setError('skills', document.getElementById('skills').value.trim() ? '' : 'Skills field cannot be empty.');
+const validateDescription = () => {
+  const len = descriptionEl.value.trim().length;
+  return setError('description', len < 50 ? `At least 50 characters required (${len}/50).` : '');
+};
+const validateResume = () => {
+  const file = document.getElementById('resume').files[0];
+  if (!file) return setError('resume', 'Please upload your resume.');
+  if (!/\.(pdf|docx)$/i.test(file.name)) return setError('resume', 'Only PDF or DOCX files are allowed.');
+  return setError('resume', '');
+};
+
+['position','jobLevel','experience','skills'].forEach(id => {
+  document.getElementById(id).addEventListener('input', () => ({position:validatePosition, jobLevel:validateJobLevel, experience:validateExperience, skills:validateSkills}[id]()));
+});
+document.getElementById('resume').addEventListener('change', validateResume);
+document.getElementById('backBtn').addEventListener('click', () => showStep(1));
+
+jobForm.addEventListener('submit', e => {
+  e.preventDefault();
+  if ([validatePosition(), validateJobLevel(), validateExperience(), validateSkills(), validateDescription(), validateResume()].every(Boolean)) showStep(3);
+});
+
+</script>
+</body>
+</html>

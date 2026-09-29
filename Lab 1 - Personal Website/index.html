@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashwin S - Personal Website</title>
+<meta name="description" content="Ashwin S — AI & Software Engineer in training at Shiv Nadar University Chennai.">
+<link rel="icon" type="image/jpeg" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="aurora-bg" aria-hidden="true">
+  <div class="aurora-blob blob-1"></div>
+  <div class="aurora-blob blob-2"></div>
+  <div class="aurora-blob blob-3"></div>
+  <div class="noise-overlay"></div>
+</div>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner glass">
+    <ul class="nav-links nav-links--spread" id="nav-links">
+      <li><a href="#" data-page="home"           class="nav-link">Home</a></li>
+      <li><a href="#" data-page="education"      class="nav-link">Education</a></li>
+      <li><a href="#" data-page="experience"     class="nav-link">Experience</a></li>
+      <li><a href="#" data-page="projects"       class="nav-link">Projects</a></li>
+      <li><a href="#" data-page="skills"         class="nav-link">Skills</a></li>
+      <li><a href="#" data-page="profiles"       class="nav-link">Profiles</a></li>
+      <li><a href="#" data-page="contact"        class="nav-link">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HOME -->
+<div class="page active" id="page-home">
+  <div class="hero">
+    <div class="hero-grid">
+      <div class="hero-text reveal">
+        <p class="eyebrow mono">// building at the edge of intelligence</p>
+        <h1 class="hero-title">Hi, I'm <span class="gradient-text">Ashwin</span></h1>
+        <p class="hero-subtitle">
+          AI &amp; Software Engineer-in-training, crafting intelligent systems and clean, scalable software.
+          Currently pursuing my <strong>B.Tech in Artificial Intelligence &amp; Data Science</strong> at
+          <strong>Shiv Nadar University, Chennai</strong> — from machine learning pipelines to full-stack
+          applications, I love turning ideas into working products.
+        </p>
+        <div class="hero-stats">
+          <div class="stat"><span class="stat-num">2</span><span class="stat-label">Months Work Exp.</span></div>
+          <div class="stat"><span class="stat-num">6</span><span class="stat-label">Projects Shipped</span></div>
+          <div class="stat"><span class="stat-num">120+</span><span class="stat-label">LeetCode Problems</span></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#" class="btn btn-outline" data-page="contact">Contact</a>
+          <a href="Resume.pdf" class="btn btn-outline" download>↓ Resume PDF</a>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="profile-card glass">
+          <div class="profile-img-wrap">
+            <img src="pfp.png" alt="Ashwin S" class="profile-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+            <div class="img-fallback">AS</div>
+          </div>
+          <h3>Ashwin S</h3>
+          <p class="mono small muted">AI &amp; Software Engineer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<div class="page" id="page-education">
+  <section class="section">
+    <div class="section-head reveal">
+      <h2>Academic Timeline</h2>
+    </div>
+    <div class="glass edu-table-wrap reveal">
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Institution</th>
+            <th>Degree / Level</th>
+            <th>Year</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shiv Nadar University, Chennai</td>
+            <td>B.Tech — Artificial Intelligence &amp; Data Science</td>
+            <td>2028</td>
+            <td>9.012 CGPA</td>
+          </tr>
+          <tr>
+            <td>Vidya Mandir @ Estancia</td>
+            <td>12th — CBSE (PCM / Computer Science)</td>
+            <td>2024</td>
+            <td>95.2%</td>
+          </tr>
+          <tr>
+            <td>Vidya Mandir @ Estancia</td>
+            <td>10th — CBSE</td>
+            <td>2022</td>
+            <td>96.4%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="page" id="page-experience">
+  <section class="section">
+    <div class="section-head reveal">
+      <h2>Work Experience</h2>
+    </div>
+    <div class="reveal">
+      <div class="exp-card glass">
+        <div class="exp-header">
+          <div>
+            <h3>AI Software Engineering Intern</h3>
+            <p class="accent-text">Zoho Corporation</p>
+          </div>
+          <span class="mono small badge">May - Jul 2026 (On-Site)</span>
+        </div>
+          <ul class="exp-list">
+            <li>Built a full-stack analytics dashboard for AI usage metrics, delivering reusable, embeddable widgets integrated into the core application.</li>
+            <li>Developed an AI-powered ITSM Q&A feature using internal APIs, Ollama models, and Java Servlets for production deployment.</li>
+            <li>Reduced LLM latency and improved accuracy by implementing a hierarchical retrieval layer that filtered ticket context before inference.</li>
+            <li>Built a RAG pipeline on LibreChat using product documentation and release notes with nomic-embed-text embeddings.</li>
+            <li>Designed an autonomous AI agent using Ollama, MCP, and PostgreSQL to generate and execute custom reporting queries.</li>
+          </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- PROJECTS -->
+<div class="page" id="page-projects">
+  <section class="section">
+    <div class="section-head reveal">
+      <h2>Featured Work</h2>
+    </div>
+    <div class="projects-grid reveal">
+
+      <article class="project-card glass">
+        <div class="project-header-band kavachpay-band">
+          <span class="proj-letter pl-kp">₹</span>
+          <span class="mono small muted">Guidewire DEVTrails 2026</span>
+        </div>
+        <div class="project-body">
+          <h3>KavachPay</h3>
+          <p>Parametric income insurance platform for gig delivery workers — automatically detects disruptions (rain, AQI, floods, curfews) via IMD/CPCB/NDMA government APIs and pays workers within minutes, no claim form required. Built the backend with Flask APIs for claim processing, Firebase Firestore + Auth for real-time data, Razorpay for UPI payouts, and integrated a 7-model ML pipeline (fraud detection, premium pricing, churn prediction, KavachScore).</p>
+          <div class="project-links">
+            <a href="https://github.com/kirithic-0/KavachPay-" target="_blank" rel="noopener" class="link-btn">GitHub ↗</a>
+            <a href="https://kavach-pay5.vercel.app/" target="_blank" rel="noopener" class="link-btn">Try it Out ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="project-card glass">
+        <div class="project-header-band shell-band">
+          <span class="proj-letter pl-sh">FB</span>
+          <span class="mono small muted">Shell Hackathon 2025</span>
+        </div>
+        <div class="project-body">
+          <h3>Optimal Fuel Blend Predictor</h3>
+          <p>ML model to predict 10 blend property targets for fuel compositions. Engineered features from 5-component fuel fractions: weighted properties, pairwise interaction terms, and Shannon entropy of blend compositions to capture non-linear blending behaviour. Built a stacking ensemble of tuned XGBoost and LightGBM with a Linear Regression meta-learner; 5-fold CV with inverse-MAPE weighted fold averaging.</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</div>
+
+<!-- SKILLS -->
+<div class="page" id="page-skills">
+  <section class="section">
+    <div class="section-head reveal">
+      <h2>Technical Arsenal</h2>
+    </div>
+    <div class="skills-grid reveal">
+
+      <div class="glass skill-category">
+        <h3 class="mono skill-title">Languages</h3>
+        <ul class="skill-list">
+          <li>Python</li><li>C</li><li>C++</li>
+          <li>Java</li><li>JavaScript</li><li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="glass skill-category">
+        <h3 class="mono skill-title">AI / LLM</h3>
+        <ul class="skill-list">
+          <li>Ollama</li><li>RAG Pipelines</li><li>MCP Servers</li>
+          <li>Prompt Engineering</li><li>LLM API Integration</li><li>Open Source AI</li>
+        </ul>
+      </div>
+
+      <div class="glass skill-category">
+        <h3 class="mono skill-title">Web &amp; App Dev</h3>
+        <ul class="skill-list">
+          <li>React</li><li>Flask</li><li>REST API Design</li>
+          <li>Firebase</li><li>Supabase</li><li>PostgreSQL</li>
+          <li>Web Scraping</li><li>CSS</li><li>Dashboard Dev</li>
+        </ul>
+      </div>
+
+      <div class="glass skill-category">
+        <h3 class="mono skill-title">Data Science &amp; ML</h3>
+        <ul class="skill-list">
+          <li>NumPy</li><li>Pandas</li><li>Scikit-learn</li>
+          <li>XGBoost</li><li>LightGBM</li><li>Feature Engineering</li>
+          <li>Stacking Ensembles</li>
+        </ul>
+      </div>
+
+      <div class="glass skill-category">
+        <h3 class="mono skill-title">DSA &amp; Concepts</h3>
+        <ul class="skill-list">
+          <li>Data Structures &amp; Algorithms (C++)</li>
+          <li>120+ LeetCode Problems</li>
+          <li>Object-Oriented Programming</li>
+          <li>Version Control (Git)</li>
+          <li>Database Design</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</div>
+
+<!-- PROFILES -->
+<div class="page" id="page-profiles">
+  <section class="section">
+    <div class="section-head reveal">
+      <h2>Find Me Online</h2>
+    </div>
+    <div class="profiles-grid reveal">
+
+      <a href="https://github.com/Ashwin271206" target="_blank" rel="noopener" class="profile-link glass">
+        <span class="profile-icon pi-gh">Gh</span>
+        <span class="profile-name">GitHub</span>
+        <span class="mono small muted">@Ashwin271206</span>
+      </a>
+
+      <a href="https://linkedin.com/in/ashwin-shanmugam-b81a54333" target="_blank" rel="noopener" class="profile-link glass">
+        <span class="profile-icon pi-li">in</span>
+        <span class="profile-name">LinkedIn</span>
+        <span class="mono small muted">/in/ashwin-shanmugam</span>
+      </a>
+
+      <a href="https://leetcode.com/u/Ashwin_271206" target="_blank" rel="noopener" class="profile-link glass">
+        <span class="profile-icon pi-lc">LC</span>
+        <span class="profile-name">LeetCode</span>
+        <span class="mono small muted">@Ashwin_271206</span>
+      </a>
+
+      <a href="mailto:ashwinshan2712@gmail.com" class="profile-link glass">
+        <span class="profile-icon pi-em">@</span>
+        <span class="profile-name">Email</span>
+        <span class="mono small muted">ashwinshan2712@gmail.com</span>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<!-- CONTACT -->
+<div class="page" id="page-contact">
+  <section class="section">
+    <div class="section-head reveal">
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-card glass reveal">
+      <table class="info-table">
+        <tbody>
+          <tr><td class="mono label">Phone</td><td>+91 75500 75500</td></tr>
+          <tr><td class="mono label">Email</td><td><a href="mailto:ashwinshan2712@gmail.com" class="inline-link">ashwinshan2712@gmail.com</a></td></tr>
+          <tr><td class="mono label">Location</td><td>Chennai, Tamil Nadu, India</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+
+<script>
+const pages    = document.querySelectorAll('.page');
+const navLinks = document.querySelectorAll('[data-page]');
+
+function showPage(id) {
+  pages.forEach(p => p.classList.remove('active'));
+  const target = document.getElementById('page-' + id);
+  if (target) {
+    target.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    target.querySelectorAll('.reveal').forEach(el => {
+      el.classList.remove('is-visible');
+      setTimeout(() => el.classList.add('is-visible'), 80);
+    });
+  }
+  navLinks.forEach(a => a.classList.toggle('active-link', a.dataset.page === id));
+  document.body.classList.remove('menu-open');
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', e => { e.preventDefault(); showPage(link.dataset.page); });
+});
+
+showPage('home');
+
+document.getElementById('hamburger').addEventListener('click', () => {
+  document.body.classList.toggle('menu-open');
+});
+
+const nav = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 40);
+});
+</script>
+</body>
+</html>

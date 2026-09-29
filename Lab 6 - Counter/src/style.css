@@ -1,0 +1,20 @@
+body { margin: 0; font-family: Arial, sans-serif; }
+
+.app {
+  width: 400px; text-align: center;
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 { font-size: 32px; }
+.counter { font-size: 32px; margin: 40px 0; }
+
+.buttons { display: flex; justify-content: center; gap: 8px; }
+
+button {
+  border: none; padding: 7px 12px;
+  font-size: 16px; color: white; cursor: pointer;
+}
+
+.increment { background-color: green; }
+.decrement { background-color: red; }

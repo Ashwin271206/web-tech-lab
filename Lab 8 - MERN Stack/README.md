@@ -19,7 +19,7 @@ A product catalog and shopping cart app, converted from a frontend-only React pr
 ## Project Structure
 
 ```
-Lab 8 - MERN ShopperzCart/
+Lab 8 - MERN Stack/
 ├── client/          # React frontend (Vite)
 │   └── src/
 │       ├── components/       # Cart.jsx, TaskForm.jsx, TaskItem.jsx, TaskList.jsx, TodoApp.jsx
