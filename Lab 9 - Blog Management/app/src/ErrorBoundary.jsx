@@ -13,7 +13,7 @@ export default class ErrorBoundary extends React.Component {
   }
 
   componentDidCatch(error, info) {
-    console.error("BlogVault crashed:", error, info?.componentStack);
+    console.error("Bloggle crashed:", error, info?.componentStack);
   }
 
   render() {

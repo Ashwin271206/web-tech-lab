@@ -1,5 +1,5 @@
 {
-  "name": "blogvault-server",
+  "name": "Bloggle-server",
   "version": "1.0.0",
   "description": "Express.js REST API for the Blog/Post Management application (MongoDB Atlas)",
   "main": "index.js",

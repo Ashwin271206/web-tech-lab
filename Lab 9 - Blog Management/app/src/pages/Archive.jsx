@@ -37,7 +37,7 @@ export default function Archive() {
   }, []);
 
   useEffect(() => {
-    document.title = "Archive · BlogVault";
+    document.title = "Archive · Bloggle";
     const controller = new AbortController();
     load(controller.signal);
     return () => controller.abort();

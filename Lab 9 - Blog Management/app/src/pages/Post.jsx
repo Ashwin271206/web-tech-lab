@@ -53,7 +53,7 @@ export default function Post() {
   }, [load]);
 
   useEffect(() => {
-    document.title = post ? `${post.title} · BlogVault` : "BlogVault";
+    document.title = post ? `${post.title} · Bloggle` : "Bloggle";
   }, [post]);
 
   const stopEditing = () => {

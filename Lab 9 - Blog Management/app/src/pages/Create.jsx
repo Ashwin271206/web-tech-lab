@@ -12,7 +12,7 @@ export default function Create() {
   const [error, setError] = useState("");
   const [fieldErrors, setFieldErrors] = useState({});
 
-  useEffect(() => { document.title = "New post · BlogVault"; }, []);
+  useEffect(() => { document.title = "New post · Bloggle"; }, []);
 
   async function handleSubmit(values) {
     setBusy(true);

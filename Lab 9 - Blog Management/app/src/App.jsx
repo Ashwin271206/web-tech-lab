@@ -15,7 +15,7 @@ function ScrollToTop() {
 }
 
 function NotFound() {
-  useEffect(() => { document.title = "Page not found · BlogVault"; }, []);
+  useEffect(() => { document.title = "Page not found · Bloggle"; }, []);
   return (
     <EmptyState
       title="This page doesn't exist"
@@ -34,9 +34,9 @@ export default function App() {
 
       <header className="site-header">
         <div className="container header-inner">
-          <Link to="/" className="brand" aria-label="BlogVault home">
+          <Link to="/" className="brand" aria-label="Bloggle home">
             <span className="brand-mark" aria-hidden="true" />
-            BlogVault
+            Bloggle
           </Link>
           <nav className="nav" aria-label="Main">
             <NavLink to="/" end>Home</NavLink>
@@ -57,7 +57,7 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-        <div className="container">BlogVault · React, Express and MongoDB Atlas</div>
+        <div className="container">Bloggle · React, Express and MongoDB Atlas</div>
       </footer>
     </>
   );

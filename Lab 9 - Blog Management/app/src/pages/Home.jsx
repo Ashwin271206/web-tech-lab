@@ -24,7 +24,7 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    document.title = "BlogVault";
+    document.title = "Bloggle";
     const controller = new AbortController();
     load(controller.signal);
     return () => controller.abort();

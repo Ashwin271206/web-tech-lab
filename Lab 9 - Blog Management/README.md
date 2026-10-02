@@ -1,4 +1,4 @@
-# BlogVault — Blog / Post Management (React + Express + MongoDB Atlas)
+# Bloggle — Blog / Post Management (React + Express + MongoDB Atlas)
 
 A full-stack blog management application where users can **create, view, update, and delete** blog posts. The **React** frontend talks to an **Express.js REST API** using `fetch()`, and posts are stored in **MongoDB Atlas** using the official MongoDB Node.js driver.
 
