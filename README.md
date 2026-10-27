@@ -33,7 +33,7 @@ This repository contains the source code files for all lab experiments completed
 ├── Lab 7 - NodeJS Server/
 ├── Lab 8 - MERN Stack/
 ├── Lab 9 - Blog Management/
-├── ...
+├── Lab 10 - FS & HTTP & URL/
 ├── .gitignore
 └── README.md
 ```
@@ -51,3 +51,4 @@ This repository contains the source code files for all lab experiments completed
 | 7 | [NodeJS Server](Lab%207%20-%20NodeJS%20Server/) | A Node.js HTTP server built with core modules (`http`, `fs`, `path`) that serves static pages with request logging and 404 handling. |
 | 8 | [MERN Stack](Lab%208%20-%20MERN%20Stack/) | ShopperzCart converted into a full MERN app with a MongoDB-backed shopping cart and a Task Manager (Todo) with a REST API. |
 | 9 | [Blog Management](Lab%209%20%20-%20Blog%20Management/) | BlogVault, a full-stack blog app to create, view, edit, and delete posts using React, an Express REST API, and MongoDB Atlas. |
+| 10 | [FS & HTTP & URL](Lab%2010%20-%20FS%20%26%20HTTP%20%26%20URL/) | A Node.js web server demonstrating FS, HTTP and URL modules. |

@@ -1,0 +1,15 @@
+{
+  "name": "student-info-server",
+  "version": "1.0.0",
+  "description": "Student Information Web Server using Node.js core modules (http, fs, url)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["nodejs", "http", "fs", "url", "student", "server"],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

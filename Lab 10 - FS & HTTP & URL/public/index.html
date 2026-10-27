@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Student Records</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <span class="masthead-kicker">Registrar's Office</span>
+        <h1>Student Records</h1>
+      </div>
+      <div class="masthead-count">
+        <span class="count-number" id="totalCount">0</span>
+        <span class="count-label">students on file</span>
+      </div>
+    </header>
+
+    <main class="layout">
+
+      <section class="panel form-panel">
+        <h2 id="formTitle">New record</h2>
+        <form id="studentForm">
+          <input type="hidden" id="studentId" />
+
+          <label>
+            <span>Full name</span>
+            <input type="text" id="name" required placeholder="Ananya Rao" />
+          </label>
+
+          <div class="field-pair">
+            <label>
+              <span>Age</span>
+              <input type="number" id="age" required min="1" placeholder="20" />
+            </label>
+            <label>
+              <span>Year</span>
+              <input type="number" id="year" required min="1" max="5" placeholder="2" />
+            </label>
+          </div>
+
+          <label>
+            <span>Department</span>
+            <input type="text" id="department" required placeholder="Computer Science" />
+          </label>
+
+          <label>
+            <span>Email</span>
+            <input type="email" id="email" required placeholder="ananya.rao@example.com" />
+          </label>
+
+          <div class="form-actions">
+            <button type="submit" id="submitBtn" class="btn btn-solid">Save record</button>
+            <button type="button" id="cancelEditBtn" class="btn btn-ghost hidden">Cancel</button>
+          </div>
+          <p id="formMessage" class="message" role="status"></p>
+        </form>
+      </section>
+
+      <section class="panel list-panel">
+        <div class="list-panel-head">
+          <h2>All records</h2>
+          <button id="refreshBtn" class="btn btn-ghost btn-small">Refresh</button>
+        </div>
+
+        <div class="filter-row">
+          <input type="text" id="searchBox" placeholder="Search by name" />
+          <input type="text" id="deptFilter" placeholder="Department" />
+          <input type="number" id="yearFilter" placeholder="Year" />
+        </div>
+
+        <div class="table-wrap">
+          <table id="studentsTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Department</th>
+                <th>Year</th>
+                <th>Email</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="studentsBody"></tbody>
+          </table>
+        </div>
+        <p id="emptyMessage" class="empty hidden">No matching records.</p>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>

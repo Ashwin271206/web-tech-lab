@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Aravind Kumar",
+    "age": 20,
+    "department": "Computer Science",
+    "year": 2,
+    "email": "aravind.kumar@example.com"
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "age": 21,
+    "department": "Electronics",
+    "year": 3,
+    "email": "priya.sharma@example.com"
+  },
+  {
+    "id": 4,
+    "name": "Shivaraj Kumar",
+    "age": 20,
+    "department": "AI&DS",
+    "year": 3,
+    "email": "shivakumar@example.com"
+  }
+]
